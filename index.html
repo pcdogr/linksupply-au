@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkSupply AU — Sourcing for Australian Manufacturers</title>
+  <meta name="description" content="We help Australian manufacturers source industrial consumables, parts, and custom products from China — saving 30-50% vs local procurement." />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #1A1A2E;
+      background: #F7F8FA;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== COLOR TOKENS ===== */
+    :root {
+      --primary: #1A3A5C;
+      --primary-light: #2A5A8C;
+      --accent: #E87A2A;
+      --accent-hover: #D06A1A;
+      --bg: #F7F8FA;
+      --bg-card: #FFFFFF;
+      --text: #1A1A2E;
+      --text-light: #5A6A7E;
+      --border: #E2E6EA;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3 { line-height: 1.2; font-weight: 600; }
+    h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    h2 { font-size: 1.75rem; margin-bottom: 1.5rem; text-align: center; }
+    h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+    p { margin-bottom: 1rem; color: var(--text-light); }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: -0.02em;
+    }
+    .logo span { color: var(--accent); }
+    .logo small {
+      font-weight: 400;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.6);
+      margin-left: 0.3rem;
+    }
+    nav a {
+      color: rgba(255,255,255,0.85);
+      margin-left: 1.5rem;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #0F2440 100%);
+      color: #fff;
+      padding: 5rem 0 4rem;
+      text-align: center;
+    }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 0.75rem; }
+    .hero .subhead {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 650px;
+      margin: 0 auto 2rem;
+    }
+    .hero .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.9rem 2.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hero .btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+
+    /* ===== SECTIONS ===== */
+    section { padding: 4rem 0; }
+    section:nth-child(even) { background: var(--bg-card); }
+
+    /* ===== PROBLEM ===== */
+    .problem-text {
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .problem-item {
+      background: var(--bg);
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .problem-item .icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .problem-item .label { font-weight: 600; font-size: 0.85rem; }
+    .problem-item .desc { font-size: 0.85rem; color: var(--text-light); }
+
+    /* ===== HOW IT WORKS ===== */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .step {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background: var(--bg);
+      border-radius: 12px;
+      position: relative;
+    }
+    .step .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+    .step h3 { font-size: 0.95rem; }
+    .step p { font-size: 0.85rem; margin-bottom: 0; }
+
+    /* ===== CASE STUDIES ===== */
+    .cases {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .case-card {
+      background: var(--bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent);
+    }
+    .case-card .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .case-card h3 { font-size: 1rem; }
+    .case-card p { font-size: 0.88rem; margin-bottom: 0; }
+
+    /* ===== INDUSTRIES ===== */
+    .industries {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .industry-item {
+      background: var(--bg);
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    /* ===== WHY US ===== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .why-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1rem 1.25rem;
+      background: var(--bg);
+      border-radius: 10px;
+    }
+    .why-item .icon { font-size: 1.3rem; flex-shrink: 0; }
+
+    /* ===== CTA ===== */
+    .cta-section {
+      text-align: center;
+      background: var(--primary);
+      color: #fff;
+    }
+    .cta-section h2 { color: #fff; }
+    .cta-section p { color: rgba(255,255,255,0.7); max-width: 550px; margin: 0 auto 2rem; }
+    .cta-section .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.9rem 2.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .cta-section .btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0F1A2E;
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.85rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.4rem; }
+      .hero { padding: 3rem 0 2.5rem; }
+      .hero h1 { font-size: 1.9rem; }
+      .hero .subhead { font-size: 1rem; }
+
+      .problem-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .cases { grid-template-columns: 1fr; }
+      .industries { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+
+      header .container { flex-direction: column; gap: 0.5rem; }
+      nav a { margin: 0 0.75rem; font-size: 0.85rem; }
+    }
+    @media (max-width: 480px) {
+      .steps { grid-template-columns: 1fr; }
+      .industries { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container">
+    <div class="logo">LINK<span>SUPPLY</span> <small>AU</small></div>
+    <nav>
+      <a href="#how">How It Works</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#industries">Industries</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <h1>Hard to find in Australia?<br />We source from China.</h1>
+    <p class="subhead">
+      We help Australian manufacturers find industrial consumables, parts, and custom products
+      that are unavailable locally or priced too high — saving you 30–50% on procurement.
+    </p>
+    <a href="#contact" class="btn">Tell Us What You Need →</a>
+  </div>
+</section>
+
+<!-- ===== PROBLEM ===== -->
+<section id="problem">
+  <div class="container">
+    <h2>We find what Australian manufacturers can't</h2>
+    <p class="problem-text">
+      Australian manufacturers face a common problem: specialty consumables are hard to find,
+      custom parts cost a fortune locally, and small runs get ignored by big suppliers.
+      We bridge that gap — connecting you directly with proven Chinese manufacturers.
+    </p>
+    <div class="problem-grid">
+      <div class="problem-item">
+        <span class="icon">🔍</span>
+        <div>
+          <div class="label">Can't find it locally</div>
+          <div class="desc">Specialty tapes, seals, fittings — we find or custom-make them in China.</div>
+        </div>
+      </div>
+      <div class="problem-item">
+        <span class="icon">💰</span>
+        <div>
+          <div class="label">Paying too much</div>
+          <div class="desc">Factory-direct pricing, not local distributor margins.</div>
+        </div>
+      </div>
+      <div class="problem-item">
+        <span class="icon">📏</span>
+        <div>
+          <div class="label">MOQ too high</div>
+          <div class="desc">Flexible minimums — we work with small runs too.</div>
+        </div>
+      </div>
+      <div class="problem-item">
+        <span class="icon">🔧</span>
+        <div>
+          <div class="label">Custom parts needed</div>
+          <div class="desc">Send us a spec or drawing, we'll find the right manufacturer.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="how">
+  <div class="container">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Tell Us Your Need</h3>
+        <p>Specs, quantity, target price — the more detail, the better.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>We Quote</h3>
+        <p>We get you a landed price from China — inclusive of freight.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Sample First</h3>
+        <p>We send samples. You approve before we go to production.</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h3>Delivered</h3>
+        <p>Sea or air freight straight to your door in Adelaide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CASE STUDIES ===== -->
+<section id="cases">
+  <div class="container">
+    <h2>Recent Sourcing Wins</h2>
+    <div class="cases">
+      <div class="case-card">
+        <div class="tag">Consumables</div>
+        <h3>1.2m Wide Double-Sided Tape</h3>
+        <p>Not stocked anywhere in Australia. We custom-ordered from a Chinese manufacturer. Now a repeat supply item.</p>
+      </div>
+      <div class="case-card">
+        <div class="tag">Custom Parts</div>
+        <h3>300+ Hat Display Stands</h3>
+        <p>Golf course needed hat displays. Air-freighted samples for approval, then sea-freighted 300+ units at 50% savings.</p>
+      </div>
+      <div class="case-card">
+        <div class="tag">Custom Textiles</div>
+        <h3>30 Houseboat Mattress Covers</h3>
+        <p>Custom-sized mattress covers for a floating home fitout. Total order value $7,000+.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INDUSTRIES ===== -->
+<section id="industries">
+  <div class="container">
+    <h2>Industries We Serve</h2>
+    <div class="industries">
+      <div class="industry-item">🍷 Wine &amp; Beverage</div>
+      <div class="industry-item">🚐 RV &amp; Camping</div>
+      <div class="industry-item">⛵ Marine &amp; Boatbuilding</div>
+      <div class="industry-item">🧀 Agriculture &amp; Farming</div>
+      <div class="industry-item">🏭 General Manufacturing</div>
+      <div class="industry-item">🏗️ Construction</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section>
+  <div class="container">
+    <h2>Why LinkSupply AU</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="icon">✅</span>
+        <div>
+          <strong>30–50% savings</strong>
+          <div style="font-size:0.88rem;color:var(--text-light);">vs. local Australian procurement.</div>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="icon">✅</span>
+        <div>
+          <strong>Zero inventory risk</strong>
+          <div style="font-size:0.88rem;color:var(--text-light);">You order, we source. No stock you don't need.</div>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="icon">✅</span>
+        <div>
+          <strong>Proven track record</strong>
+          <div style="font-size:0.88rem;color:var(--text-light);">Tape, display stands, textiles — real orders delivered.</div>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="icon">✅</span>
+        <div>
+          <strong>Sample-before-batch</strong>
+          <div style="font-size:0.88rem;color:var(--text-light);">Always sample first. Always.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT / CTA ===== -->
+<section id="contact" class="cta-section">
+  <div class="container">
+    <h2>Have a sourcing need?</h2>
+    <p>
+      Tell us what you're looking for — we'll get back to you with a landed price from China
+      within 48 hours. No obligation, no charge for the first quote.
+    </p>
+    <p><strong>📍 Adelaide &amp; South Australia</strong></p>
+    <p>📧 <a href="mailto:info@linksupply.com.au" style="color:var(--accent);text-decoration:underline;">info@linksupply.com.au</a></p>
+    <p style="margin-top:-0.5rem;"><em>Email address placeholder — update once registered.</em></p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    &copy; 2026 LinkSupply AU — Sourcing for Australian Manufacturers.
+  </div>
+</footer>
+
+</body>
+</html>

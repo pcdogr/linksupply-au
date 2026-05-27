@@ -67,7 +67,7 @@
     .trust-bar{border-top:1px solid #e2e6ea;border-bottom:1px solid #e2e6ea;padding:1.25rem 0;background:#fff}
     .trust-bar .container{display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap}
     .trust-item{display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;font-weight:500;color:#4a5568}
-    .trust-item .icon{width:20px;height:20px;border-radius:50%;background:#e8f0f8;display:flex;align-items:center;justify-content:center;font-size:0.7rem;flex-shrink:0}
+    .trust-item .icon{width:20px;height:20px;border-radius:50%;background:#e8f0f8;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 
     /* ── Section headers ── */
     .section-label{font-family:DM Mono,monospace;font-size:0.7rem;font-weight:500;text-transform:uppercase;letter-spacing:0.15em;color:#a0aec0;margin-bottom:0.75rem}
@@ -101,8 +101,9 @@
 
     /* ── Industries ── */
     .ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;max-width:680px}
-    .ind-item{background:#fff;border:1px solid #e2e6ea;border-radius:10px;padding:1rem 1.25rem;font-weight:500;font-size:0.9rem;color:#4a5568;transition:all 0.2s;text-align:center}
+    .ind-item{background:#fff;border:1px solid #e2e6ea;border-radius:10px;padding:1rem 1.25rem;font-weight:500;font-size:0.9rem;color:#4a5568;transition:all 0.2s;display:flex;align-items:center;gap:0.6rem}
     .ind-item:hover{border-color:#1a3a5c;color:#1a3a5c;background:#f7f8fa}
+    .ind-item svg{width:18px;height:18px;flex-shrink:0;opacity:0.7}
     @media(max-width:600px){.ind-grid{grid-template-columns:1fr 1fr}}
 
     /* ── Why ── */
@@ -187,10 +188,10 @@
 <!-- ═══ TRUST BAR ═══ -->
 <div class="trust-bar">
   <div class="container">
-    <div class="trust-item"><span class="icon">✓</span> Sample-before-batch — always</div>
-    <div class="trust-item"><span class="icon">✓</span> Landed cost quoted upfront</div>
-    <div class="trust-item"><span class="icon">✓</span> Flexible minimums</div>
-    <div class="trust-item"><span class="icon">✓</span> No inventory you didn't order</div>
+    <div class="trust-item"><span class="icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Sample-before-batch — always</div>
+    <div class="trust-item"><span class="icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Landed cost quoted upfront</div>
+    <div class="trust-item"><span class="icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Flexible minimums</div>
+    <div class="trust-item"><span class="icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> No inventory you didn't order</div>
   </div>
 </div>
 
@@ -270,12 +271,12 @@
       <p class="body-lg">If you make things in South Australia, we can probably help lower your input costs.</p>
     </div>
     <div class="ind-grid">
-      <div class="ind-item">🍷 Wine &amp; Beverage</div>
-      <div class="ind-item">🚐 RV &amp; Marine</div>
-      <div class="ind-item">🏭 General Manufacturing</div>
-      <div class="ind-item">🧀 Agriculture &amp; Farming</div>
-      <div class="ind-item">🏗️ Construction</div>
-      <div class="ind-item">⚡ Food &amp; Beverage</div>
+      <div class="ind-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> Wine &amp; Beverage</div>
+      <div class="ind-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polyline points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> RV &amp; Marine</div>
+      <div class="ind-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> General Manufacturing</div>
+      <div class="ind-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h10M7 12h10M7 16h10"/><rect x="2" y="3" width="20" height="18" rx="2"/></svg> Agriculture &amp; Farming</div>
+      <div class="ind-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg> Construction</div>
+      <div class="ind-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg> Food &amp; Beverage</div>
     </div>
   </div>
 </section>
@@ -363,3 +364,4 @@
 
 </body>
 </html>
+

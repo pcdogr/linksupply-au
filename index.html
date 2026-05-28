@@ -3,92 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LinkSupply AU</title>
-  <meta name="description" content="From China to your factory floor — door to door." />
+  <title>LinkSupply AU — Industrial Sourcing, Elevated</title>
+  <meta name="description" content="From China to your factory floor — door to door. Sourcing, logistics, and supply chain solutions for Australian manufacturers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#000;background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-    a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
-    a:hover{text-decoration-thickness:2px}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:Inter,system-ui,-apple-system,sans-serif;color:#1a1a2e;background:#fafafa;line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
     img{max-width:100%;display:block}
 
-    .container{max-width:960px;margin:0 auto;padding:0 1.5rem}
+    .display{font-size:clamp(2.2rem,4.5vw,3.5rem);font-weight:700;line-height:1.08;letter-spacing:-0.03em;margin-bottom:1.25rem}
+    .heading-lg{font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:600;line-height:1.2;letter-spacing:-0.02em;margin-bottom:0.75rem}
+    .heading-md{font-size:1.15rem;font-weight:600;line-height:1.3;margin-bottom:0.5rem}
+    .body-lg{font-size:1.1rem;line-height:1.7;color:#4a5568}
+    .body-sm{font-size:0.9rem;line-height:1.6;color:#718096}
+
+    .container{max-width:1120px;margin:0 auto;padding:0 2rem}
+    section{padding:6rem 0}
+    @media(max-width:768px){section{padding:4rem 0}.container{padding:0 1.25rem}}
 
     /* ── Header ── */
-    header{padding:1.5rem 0;border-bottom:1px solid #e5e5e5}
-    header .container{display:flex;align-items:center;justify-content:space-between}
-    .logo{font-size:1rem;font-weight:600;letter-spacing:-0.02em}
-    .logo a{text-decoration:none}
-    nav{display:flex;gap:1.5rem;font-size:0.85rem}
-    nav a{text-decoration:none;color:#666}
-    nav a:hover{color:#000}
+    header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.05)}
+    header .container{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .logo{display:flex;align-items:center;gap:0.6rem;font-weight:700;font-size:1.15rem;letter-spacing:-0.03em}
+    .logo-mark{width:28px;height:28px;background:#1a3a5c;border-radius:6px;color:#fff;font-size:0.7rem;display:flex;align-items:center;justify-content:center;font-weight:700}
+    .logo span{color:#1a3a5c}
+    .logo .tld{color:#a0aec0;font-weight:400;font-size:0.7rem}
+    nav{display:flex;gap:2rem;font-size:0.88rem;font-weight:500;color:#4a5568}
+    nav a{transition:color 0.2s}
+    nav a:hover{color:#1a3a5c}
+    .nav-cta{background:#1a3a5c;color:#fff!important;padding:0.5rem 1.25rem;border-radius:8px;font-size:0.82rem;transition:background 0.2s}
+    .nav-cta:hover{background:#2a5a8c!important}
+    @media(max-width:768px){nav{gap:1rem;font-size:0.8rem}nav a:nth-child(3){display:none}}
 
     /* ── Hero ── */
-    .hero{padding:6rem 0 5rem}
-    .hero h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:500;line-height:1.1;letter-spacing:-0.02em;max-width:800px;margin-bottom:1.5rem}
-    .hero p{font-size:1.05rem;color:#555;max-width:580px;margin-bottom:2.5rem}
-    .hero .btn{display:inline-flex;align-items:center;gap:0.5rem;background:#000;color:#fff;padding:0.85rem 2rem;border-radius:0;font-size:0.9rem;font-weight:500;text-decoration:none;transition:opacity 0.2s}
-    .hero .btn:hover{opacity:0.8}
+    .hero{padding-top:calc(68px + 5rem);padding-bottom:5rem;background:linear-gradient(180deg,#f7f8fa 0%,#fff 60%)}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+    .hero .body-lg{max-width:520px;margin-bottom:2rem}
+    .hero-cta{display:inline-flex;align-items:center;gap:0.6rem;background:#1a3a5c;color:#fff;padding:0.9rem 2.2rem;border-radius:10px;font-weight:600;font-size:0.95rem;transition:all 0.25s;box-shadow:0 4px 14px rgba(26,58,92,0.25)}
+    .hero-cta:hover{background:#2a5a8c;transform:translateY(-2px);box-shadow:0 6px 20px rgba(26,58,92,0.35)}
 
-    /* ── Section ── */
-    section{padding:5rem 0}
-    section + section{border-top:1px solid #e5e5e5}
-    .section-label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#999;margin-bottom:1.5rem}
+    .hero-visual{background:#eef1f5;border-radius:20px;padding:2.5rem;min-height:300px;display:flex;flex-direction:column;justify-content:center}
+    .hero-visual .stat-row{display:flex;gap:2rem;margin-bottom:1.5rem;flex-wrap:wrap}
+    .hero-visual .stat{text-align:center}
+    .hero-visual .stat-num{font-size:2rem;font-weight:700;color:#1a3a5c;letter-spacing:-0.03em;font-feature-settings:"tnum"}
+    .hero-visual .stat-label{font-size:0.8rem;color:#718096;font-weight:500}
+    .hero-visual .stat-desc{font-size:0.9rem;color:#4a5568}
+    .hero-badge{display:inline-flex;align-items:center;gap:0.4rem;background:#fff;border:1px solid #e2e6ea;padding:0.4rem 0.9rem;border-radius:100px;font-size:0.8rem;font-weight:500;color:#4a5568;margin-bottom:1.5rem}
+
+    @media(max-width:768px){.hero-grid{grid-template-columns:1fr;gap:2rem}.hero{padding-top:calc(68px + 2.5rem);padding-bottom:3rem}.hero-visual{padding:1.5rem}}
+
+    /* ── Section label ── */
+    .section-label{font-family:DM Mono,monospace;font-size:0.7rem;font-weight:500;text-transform:uppercase;letter-spacing:0.15em;color:#a0aec0;margin-bottom:0.75rem}
     .section-intro{max-width:600px;margin-bottom:3rem}
-    .section-intro h2{font-size:1.6rem;font-weight:500;letter-spacing:-0.01em;margin-bottom:0.75rem}
-    .section-intro p{color:#555;font-size:0.95rem}
+    .section-intro .body-lg{color:#718096}
 
-    /* ── Service Grid ── */
-    .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem 3rem}
-    .service-item{border-top:1px solid #e5e5e5;padding-top:1.5rem}
-    .service-item h3{font-size:1rem;font-weight:600;margin-bottom:0.35rem}
-    .service-item p{font-size:0.88rem;color:#666;line-height:1.5}
+    /* ── Service cards (2x2) ── */
+    .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    .service-card{background:#fff;border:1px solid #e2e6ea;border-radius:16px;padding:2rem;transition:all 0.25s}
+    .service-card:hover{border-color:#c8d0d8;box-shadow:0 8px 30px rgba(0,0,0,0.06);transform:translateY(-3px)}
+    .service-card .heading-md{margin-bottom:0.5rem}
+    .service-card .body-sm{margin-bottom:0}
     @media(max-width:640px){.service-grid{grid-template-columns:1fr}}
 
-    /* ── Case Studies ── */
-    .case-list{}
-    .case-item{padding:1.5rem 0;border-top:1px solid #e5e5e5;display:grid;grid-template-columns:1fr 2fr;gap:2rem}
-    .case-item:last-child{border-bottom:1px solid #e5e5e5}
-    .case-tag{font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#999}
-    .case-body h3{font-size:1rem;font-weight:600;margin-bottom:0.3rem}
-    .case-body p{font-size:0.88rem;color:#555;line-height:1.5;margin-bottom:0.4rem}
-    .case-stat{font-size:0.82rem;color:#000;font-weight:500}
-    @media(max-width:640px){.case-item{grid-template-columns:1fr;gap:0.5rem}}
+    /* ── Cases ── */
+    .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .case-card{background:#fff;border:1px solid #e2e6ea;border-radius:16px;padding:2rem;transition:all 0.25s}
+    .case-card:hover{border-color:#c8d0d8;box-shadow:0 8px 30px rgba(0,0,0,0.06);transform:translateY(-3px)}
+    .case-tag{font-family:DM Mono,monospace;font-size:0.65rem;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#1a3a5c;margin-bottom:0.75rem}
+    .case-card .heading-md{margin-bottom:0.4rem}
+    .case-card .body-sm{margin-bottom:1rem}
+    .case-stat{font-family:DM Mono,monospace;font-size:0.8rem;font-weight:500;color:#1a3a5c}
+    @media(max-width:900px){.cases-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.cases-grid{grid-template-columns:1fr}}
 
     /* ── Industries ── */
-    .ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#e5e5e5;max-width:600px}
-    .ind-item{background:#fff;padding:1rem 1.25rem;font-size:0.88rem;font-weight:500}
-    @media(max-width:500px){.ind-grid{grid-template-columns:1fr 1fr}}
+    .ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;max-width:680px}
+    .ind-item{background:#fff;border:1px solid #e2e6ea;border-radius:10px;padding:1rem 1.25rem;font-weight:500;font-size:0.9rem;color:#4a5568;transition:all 0.2s;text-align:center}
+    .ind-item:hover{border-color:#1a3a5c;color:#1a3a5c;background:#f7f8fa}
+    @media(max-width:600px){.ind-grid{grid-template-columns:1fr 1fr}}
 
     /* ── Why ── */
-    .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#e5e5e5}
-    .why-item{background:#fff;padding:1.5rem;font-size:0.88rem}
-    .why-item strong{display:block;font-weight:600;margin-bottom:0.2rem}
-    .why-item p{color:#666;line-height:1.5;font-size:0.85rem}
-    @media(max-width:500px){.why-grid{grid-template-columns:1fr}}
+    .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:750px}
+    .why-card{display:flex;gap:1rem;padding:1.25rem;background:#fff;border:1px solid #e2e6ea;border-radius:12px;transition:border-color 0.2s}
+    .why-card:hover{border-color:#c8d0d8}
+    .why-card strong{display:block;font-size:0.9rem;margin-bottom:0.2rem}
+    .why-card .body-sm{margin-bottom:0}
+    @media(max-width:640px){.why-grid{grid-template-columns:1fr}}
 
     /* ── Contact ── */
-    .contact{background:#000;color:#fff;padding:4rem 0}
-    .contact .section-label{color:rgba(255,255,255,0.4)}
-    .contact h2{font-size:1.6rem;font-weight:500;letter-spacing:-0.01em;margin-bottom:0.75rem;color:#fff}
-    .contact p{color:rgba(255,255,255,0.6);font-size:0.95rem;max-width:520px;margin-bottom:2rem}
-    .contact .detail{font-size:0.9rem;color:rgba(255,255,255,0.8)}
-    .contact .detail span{color:rgba(255,255,255,0.4)}
+    .contact-wrap{background:#1a3a5c;border-radius:24px;padding:4rem;text-align:center;position:relative;overflow:hidden}
+    .contact-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(255,255,255,0.06),transparent 60%)}
+    .contact-wrap .heading-lg{color:#fff}
+    .contact-wrap .body-lg{color:rgba(255,255,255,0.65);max-width:550px;margin:0 auto 2rem;position:relative}
+    .contact-methods{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;position:relative}
+    .contact-item{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:1.25rem 2rem;min-width:200px;transition:background 0.2s}
+    .contact-item:hover{background:rgba(255,255,255,0.14)}
+    .contact-item .label{font-size:0.7rem;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.4);margin-bottom:0.3rem}
+    .contact-item .value{font-weight:600;color:#fff;font-size:1rem}
+    @media(max-width:768px){.contact-wrap{padding:3rem 1.5rem}}
 
-    /* ── Footer ── */
-    footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:#999;border-top:1px solid #e5e5e5}
+    footer{padding:2rem 0;text-align:center;font-size:0.85rem;color:#a0aec0;border-top:1px solid #e2e6ea}
   </style>
 </head>
 <body>
 
 <header>
   <div class="container">
-    <div class="logo"><a href="/">LinkSupply AU</a></div>
+    <div class="logo"><span class="logo-mark">LS</span> LinkSupply<span class="tld"> AU</span></div>
     <nav>
       <a href="#services">Services</a>
       <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
+      <a href="#industries">Industries</a>
+      <a href="#contact" class="nav-cta">Get a Quote</a>
     </nav>
   </div>
 </header>
@@ -96,9 +127,31 @@
 <!-- ═══ HERO ═══ -->
 <section class="hero">
   <div class="container">
-    <h1>From China to your factory floor — door to door.</h1>
-    <p>We connect Australian manufacturers with China's best supply chains. Machinery, raw materials, consumables, custom parts, full production lines — sourced, negotiated, shipped, customs cleared, and delivered to your door. One point of contact, end to end.</p>
-    <a href="#contact" class="btn">Tell us what you need →</a>
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">📍 Based in Adelaide · Serving South Australia</div>
+        <h1 class="display">From China to your<br />factory floor —<br />door to door.</h1>
+        <p class="body-lg">We connect Australian manufacturers with China's best supply chains. Machinery, raw materials, consumables, custom parts, and full production line setups — sourced, negotiated, shipped, cleared, and delivered to your door. One point of contact, end to end.</p>
+        <a href="#contact" class="hero-cta">Tell us what you need →</a>
+      </div>
+      <div class="hero-visual">
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-num">30–50%</div>
+            <div class="stat-label">Typical Cost Savings</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">6</div>
+            <div class="stat-label">Industries Served</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">China-wide</div>
+            <div class="stat-label">Supplier Network</div>
+          </div>
+        </div>
+        <p class="stat-desc">We come from Australian manufacturing — we speak your language, understand your specs, and manage the entire supply line from sourcing to delivery.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -107,74 +160,68 @@
   <div class="container">
     <div class="section-label">Services</div>
     <div class="section-intro">
-      <h2>Integrated sourcing &amp; logistics</h2>
-      <p>We're not a sourcing agent. We're your supply chain partner — managing the entire journey from supplier discovery to delivery at your factory gate.</p>
+      <h2 class="heading-lg">Full-spectrum supply chain solutions</h2>
+      <p class="body-lg">We're not just a sourcing agent — we integrate supplier negotiation, shipping, customs, and last-mile delivery into one seamless service. From a single consumable to an entire production line, we manage it all.</p>
     </div>
     <div class="service-grid">
-      <div class="service-item">
-        <h3>Machinery &amp; Equipment</h3>
-        <p>Production machinery, assembly line equipment, specialised tools — sourced from Chinese manufacturers with factory verification available.</p>
+      <div class="service-card">
+        <h3 class="heading-md">Machinery &amp; Equipment Sourcing</h3>
+        <p class="body-sm">Production machinery, assembly line equipment, specialised tools — sourced from Chinese manufacturers with factory verification and on-site inspection available.</p>
       </div>
-      <div class="service-item">
-        <h3>Raw Materials &amp; Consumables</h3>
-        <p>Specialty tapes, adhesives, fabrics, foams, packaging, industrial chemicals — the everyday inputs that are overpriced or unavailable locally.</p>
+      <div class="service-card">
+        <h3 class="heading-md">Raw Materials &amp; Consumables</h3>
+        <p class="body-sm">Specialty tapes, adhesives, fabrics, foams, packaging, industrial chemicals — the everyday inputs that are overpriced or simply unavailable in Australia.</p>
       </div>
-      <div class="service-item">
-        <h3>Production Line Setup</h3>
-        <p>Building or expanding a line? We coordinate machinery procurement, supplier negotiation, shipping, and installation logistics.</p>
+      <div class="service-card">
+        <h3 class="heading-md">Production Line Setup</h3>
+        <p class="body-sm">Expanding or building new capacity? We coordinate machinery procurement, supplier negotiation, factory layout planning, and shipping logistics — door to door.</p>
       </div>
-      <div class="service-item">
-        <h3>Supplier Verification</h3>
-        <p>Factory audits, price negotiation, sample management, and quality control. We handle the back-and-forth so you don't have to.</p>
+      <div class="service-card">
+        <h3 class="heading-md">Supplier Verification &amp; Negotiation</h3>
+        <p class="body-sm">Factory audits, price negotiation, sample management, and quality control. We handle the back-and-forth so you don't have to — across our nationwide China network.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ WORK ═══ -->
-<section id="work">
+<!-- ═══ CASE STUDIES ═══ -->
+<section id="work" style="background:#fff">
   <div class="container">
     <div class="section-label">Selected Work</div>
     <div class="section-intro">
-      <h2>Recent sourcing wins</h2>
-      <p>Real orders, real savings — for Australian manufacturers who couldn't find what they needed locally.</p>
+      <h2 class="heading-lg">Recent sourcing wins</h2>
+      <p class="body-lg">Real orders, real savings — for Australian manufacturers who couldn't find what they needed locally.</p>
     </div>
-    <div class="case-list">
-      <div class="case-item">
+    <div class="cases-grid">
+      <div class="case-card">
         <div class="case-tag">Industrial Consumables</div>
-        <div class="case-body">
-          <h3>1.2m Wide Double-Sided Tape</h3>
-          <p>A local manufacturer needed wide-format double-sided tape for production. No Australian supplier stocked it. We sourced a custom run from China — now a repeat order item.</p>
-          <div class="case-stat">100% fill rate · Repeat supply</div>
-        </div>
+        <h3 class="heading-md">1.2m Wide Double-Sided Tape</h3>
+        <p class="body-sm">A local manufacturer needed wide-format double-sided tape for production. No Australian supplier stocked it. We sourced a custom run from China — now a repeat order item.</p>
+        <div class="case-stat">100% fill rate · Repeat supply</div>
       </div>
-      <div class="case-item">
+      <div class="case-card">
         <div class="case-tag">Custom Fabrication</div>
-        <div class="case-body">
-          <h3>300+ Hat Display Stands</h3>
-          <p>A golf club needed display stands for their pro shop. The Australian-made alternative was expensive and had long lead times. We air-freighted samples, got approval, then sea-freighted the full order.</p>
-          <div class="case-stat">~50% cost savings · 300+ units</div>
-        </div>
+        <h3 class="heading-md">300+ Hat Display Stands</h3>
+        <p class="body-sm">A golf club needed display stands for their pro shop. The Australian-made alternative was expensive and had long lead times. We air-freighted samples, got approval, then sea-freighted the full order.</p>
+        <div class="case-stat">~50% cost savings · 300+ units</div>
       </div>
-      <div class="case-item">
+      <div class="case-card">
         <div class="case-tag">Marine Upholstery</div>
-        <div class="case-body">
-          <h3>30 Custom Mattress Covers</h3>
-          <p>A houseboat fitout required non-standard mattress covers. Australian upholsterers quoted high and couldn't guarantee the timeline. We had them manufactured to spec in China and shipped direct.</p>
-          <div class="case-stat">$7,000+ total order value</div>
-        </div>
+        <h3 class="heading-md">30 Custom Mattress Covers</h3>
+        <p class="body-sm">A houseboat fitout required non-standard mattress covers. Australian upholsterers quoted high and couldn't guarantee the timeline. We had them manufactured to spec in China and shipped direct.</p>
+        <div class="case-stat">$7,000+ total order value</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ INDUSTRIES ═══ -->
-<section>
+<section id="industries">
   <div class="container">
     <div class="section-label">Industries</div>
     <div class="section-intro">
-      <h2>Who we work with</h2>
-      <p>South Australian manufacturers across these sectors.</p>
+      <h2 class="heading-lg">Who we work with</h2>
+      <p class="body-lg">South Australian manufacturers across these key sectors.</p>
     </div>
     <div class="ind-grid">
       <div class="ind-item">Wine &amp; Beverage</div>
@@ -188,42 +235,59 @@
 </section>
 
 <!-- ═══ WHY ═══ -->
-<section>
+<section style="background:#fff">
   <div class="container">
     <div class="section-label">Why LinkSupply AU</div>
     <div class="section-intro">
-      <h2>Built by manufacturers, for manufacturers</h2>
-      <p>We've been on the shop floor and maintain deep supplier relationships across China. We know what matters — spec, quality, lead time, and trust.</p>
+      <h2 class="heading-lg">Built by manufacturers, for manufacturers</h2>
+      <p class="body-lg">We've been on the shop floor and maintain deep supplier relationships across China — from manufacturing hubs to industrial centres. We know what matters: spec, quality, lead time, and trust.</p>
     </div>
     <div class="why-grid">
-      <div class="why-item">
-        <strong>30–50% cost savings</strong>
-        <p>Factory-direct pricing across consumables, parts, machinery, and materials.</p>
+      <div class="why-card">
+        <div>
+          <strong>30–50% cost savings</strong>
+          <p class="body-sm">Factory-direct pricing across consumables, parts, machinery, and materials.</p>
+        </div>
       </div>
-      <div class="why-item">
-        <strong>Door-to-door logistics</strong>
-        <p>Supplier pickup, sea or air freight, customs clearance, last-mile delivery — one chain, one contact.</p>
+      <div class="why-card">
+        <div>
+          <strong>Door-to-door logistics</strong>
+          <p class="body-sm">Supplier pickup, sea/air freight, customs clearance, last-mile delivery — one integrated chain, one contact.</p>
+        </div>
       </div>
-      <div class="why-item">
-        <strong>Zero inventory risk</strong>
-        <p>You only order what you need. Samples first, production second.</p>
+      <div class="why-card">
+        <div>
+          <strong>Zero inventory risk</strong>
+          <p class="body-sm">You only order what you need. Samples first, production second. Always.</p>
+        </div>
       </div>
-      <div class="why-item">
-        <strong>China-wide supplier network</strong>
-        <p>From manufacturing hubs to industrial centres — factory audit and QC capabilities nationwide.</p>
+      <div class="why-card">
+        <div>
+          <strong>China-wide supplier network</strong>
+          <p class="body-sm">From the Pearl River Delta to Shanghai, Beijing, and beyond — factory audit and QC capabilities nationwide.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ CONTACT ═══ -->
-<section id="contact" class="contact">
+<section id="contact">
   <div class="container">
-    <div class="section-label">Contact</div>
-    <h2>Tell us what you need — we'll deliver it to your door.</h2>
-    <p>A production line, a new material supplier, a piece of machinery, or a hard-to-find consumable — we source it, negotiate it, ship it, and deliver it to your factory.</p>
-    <div class="detail"><span>Email</span> info@linksupply.com.au</div>
-    <div class="detail" style="margin-top:0.25rem"><span>Location</span> Adelaide, South Australia</div>
+    <div class="contact-wrap">
+      <h2 class="heading-lg">Tell us what you need — we'll deliver it to your door.</h2>
+      <p class="body-lg">A production line, a new material supplier, a piece of machinery, or a hard-to-find consumable — we source it, negotiate it, ship it, and deliver it to your factory. One contact, one quote, door to door.</p>
+      <div class="contact-methods">
+        <div class="contact-item">
+          <div class="label">Email</div>
+          <div class="value">info@linksupply.com.au</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">Location</div>
+          <div class="value">Adelaide, SA</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
